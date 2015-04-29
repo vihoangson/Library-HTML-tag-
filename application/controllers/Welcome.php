@@ -21,6 +21,46 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('welcome_message');
-		echo $this->html->html_input();
+		$this->html->_element=array(
+			"nameinput1" => array(
+						"type"	=> "text",
+						"label"	=> "label1",
+						"value"	=> "text",
+						"class"	=> "classInput",
+						"id"	=> "idInput",
+						),
+			"nameinput2" => array(
+						"type"	=> "text",
+						"label"	=> "label1",
+						"value"	=> "text",
+						"class"	=> "classInput",
+						"id"	=> "idInput",
+						),
+			"nameinput3" => array(
+						"type"	=> "textarea",
+						"label"	=> "label3",
+						"value"	=> "text",
+						"class"	=> "classInput",
+						"id"	=> "idInput",
+						),
+			"nameinput4" => array(
+						"type"		=> "select",
+						"label"		=> "label3",
+						"value"		=> "text",
+						"class"		=> "classInput",
+						"id"		=> "idInput",
+						"options"	=> array(
+							"option1"=>"option1_title",
+							"option2"=>"option2_title",
+							"option3"=>"option3_title",
+							"option4"=>"option4_title",
+							"option5"=>"option5_title",
+							"option6"=>"option6_title",
+							),
+						),
+
+		);
+		print_r($this->html->show());
+//		echo $this->html->element_input($attr);
 	}
 }
